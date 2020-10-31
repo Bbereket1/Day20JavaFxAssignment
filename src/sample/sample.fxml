@@ -1,0 +1,118 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ToggleGroup?>
+<GridPane fx:controller="sample.Controller"
+          xmlns:fx="http://javafx.com/fxml" alignment="TOP_CENTER" vgap="30" hgap="20" >
+
+    <padding>
+        <Insets top="10"/>
+    </padding>
+    <Label text="I SeLL" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2" textFill="darkorange"  >
+        <font>
+            <Font name="Broadway" size="60"/>
+        </font>
+    </Label >
+<!--    <Label text="Shop And Enjoy" GridPane.columnIndex="0" GridPane.rowIndex="3" textFill="darkorange" alignment="CENTER">-->
+<!--        <font>-->
+<!--            <Font name="Broadway" size="40"/>-->
+<!--        </font>-->
+<!--    </Label>-->
+<!--    <fx:define>-->
+<!--        <ToggleGroup fx:id="GenderToggle"/>-->
+<!--        -->
+<!--    </fx:define>-->
+
+
+    <VBox GridPane.rowIndex="0" GridPane.columnIndex="3" GridPane.columnSpan="2" >
+        <padding>
+            <Insets top="10"/>
+        </padding>
+        <Label text="username">
+            <font>
+                <Font name="Arial" size="14"/>
+            </font>
+        </Label>
+        <TextField/>
+        <Label text="password">
+            <font>
+                <Font name="Arial" size="14"/>
+            </font>
+        </Label>
+        <PasswordField/>
+
+        <ToggleButton text="Login" prefWidth="100" />
+
+    </VBox>
+
+    <VBox  GridPane.rowIndex="2" GridPane.columnIndex="0" GridPane.columnSpan="5">
+        <Label text="Search">
+            <font>
+                <Font name="Arial" size="14"/>
+            </font>
+        </Label>
+        <TextField/>
+    </VBox>
+
+    <fx:define>
+        <ToggleGroup fx:id="CategoryRadioButtons"/>
+    </fx:define>
+    <RadioButton text="Women" GridPane.columnIndex="0" GridPane.rowIndex="3" textFill="darkorange" toggleGroup="$CategoryRadioButtons"/>
+    <RadioButton text="Men" GridPane.columnIndex="1" GridPane.rowIndex="3" textFill="darkorange" toggleGroup="$CategoryRadioButtons"/>
+    <RadioButton text="Kids" GridPane.columnIndex="2" GridPane.rowIndex="3" textFill="darkorange" toggleGroup="$CategoryRadioButtons"/>
+
+
+    <HBox spacing="40" GridPane.columnIndex="0" GridPane.rowIndex="4" GridPane.columnSpan="5" >
+
+        <fx:define>
+            <ToggleGroup fx:id="TypeToggleButton"/>
+        </fx:define>
+        <ToggleButton text="Elegant" prefWidth="100"  toggleGroup="$TypeToggleButton"/>
+        <ToggleButton text="Night Out" prefWidth="100" toggleGroup="$TypeToggleButton"/>
+        <ToggleButton text="Casual" prefWidth="100" toggleGroup="$TypeToggleButton" />
+        <ToggleButton text="Occasional" prefWidth="100" toggleGroup="$TypeToggleButton"/>
+
+    </HBox>
+
+
+    <VBox GridPane.columnIndex="0" GridPane.rowIndex="7" GridPane.columnSpan="5">
+
+        <Label text="Events" textFill="darkorange" >
+            <font>
+                <Font name="Arial" size="20"/>
+            </font>
+        </Label>
+        <CheckBox text="Christmass"/>
+        <CheckBox text="Haloween" />
+        <CheckBox text="Valentine" />
+        <CheckBox text="Mother's Day" />
+        <CheckBox text="Father's Day"/>
+        <CheckBox text="Baby Shower"/>
+        <CheckBox text="Bridal Shower"/>
+        <CheckBox text="Others"/>
+
+    </VBox>
+
+    <HBox spacing="60" GridPane.columnIndex="0" GridPane.rowIndex="12" GridPane.columnSpan="5" alignment="CENTER">
+        <padding>
+            <Insets bottom="10"/>
+        </padding>
+
+        <Button text="Home" prefWidth="100" />
+        <Button text="Shop" prefWidth="100"/>
+        <Button text="Bag" prefWidth="100"/>
+
+    </HBox>
+
+</GridPane>
